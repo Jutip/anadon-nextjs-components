@@ -24,3 +24,165 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ul{
+  font-weight: bolder;
+  color: #333;
+
+}
+
+footer{
+  font-weight: bolder;
+  color: #3e3e3e;
+}
+
+h1, h2 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #3e3e3e;
+}
+
+.tuyok{
+  display: inline-block;
+  perspective: 800px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  box-shadow: 0 10px 20px 0 #FFECCC;
+}
+
+.tuyoknasad {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.tuyok:hover .tuyoknasad{
+  transform: rotateY(180deg);
+}
+.atubangan, .likod {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.atubangan {
+  background: #FFCDB2;
+}
+
+.likod{
+  transform: rotateY(180deg);
+}
+
+
+.libox {
+  text-align: center;
+  width: 200px;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 16px auto;
+  transition: linear 0.1s;
+}
+
+.libox:hover {
+  box-shadow: 0 8px 16px 0 #FFECCC;
+  transform: scale(1.05);
+}
+
+.content {
+  position: relative;
+  background: #FFCDB2;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  position: relative;
+  width: 450px;
+  margin: 16px auto;
+  border-radius: 14px;
+  overflow: visible;
+}
+
+@property --angol {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.box::after, .box::before {
+  --angol: 0deg;
+  content: '';
+  position: absolute;
+  inset: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 18px;
+  background-image: conic-gradient(
+    from var(--angol),transparent 70%,
+    #722323, #BA487F, #FF9587, #FFECCC, #722323
+  );
+  z-index: -1;
+  animation: border-spin 5s linear infinite;
+}
+
+.box::before{
+  filter: blur(1rem);
+  opacity: 1;
+}
+
+@keyframes border-spin {
+  from {
+    --angol: 0deg;
+  }
+  to{
+    --angol: 360deg;
+  }
+}
+
+
+.card {
+  width: 325px;
+  height: 280px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 16px auto;
+  transition: linear 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #FFECCC;
+  transform: rotate(-2deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;  
+}
+
+.card h2 {
+  margin: 12px 0 4px;
+  font-size: 1.2rem;
+  color: #333;  
+}
