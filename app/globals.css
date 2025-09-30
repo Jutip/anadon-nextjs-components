@@ -42,49 +42,10 @@ h1, h2 {
   color: #3e3e3e;
 }
 
-.tuyok{
-  display: inline-block;
-  perspective: 800px;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  position: relative;
-  box-shadow: 0 10px 20px 0 #FFECCC;
+h3 {
+  color: #3e3e3e;
+ font-family: "Brush Script MT", cursive;
 }
-
-.tuyoknasad {
-  position: relative;
-  width: 100%;
-  height: auto;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-.tuyok:hover .tuyoknasad{
-  transform: rotateY(180deg);
-}
-.atubangan, .likod {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 10px 0;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  backface-visibility: hidden;
-  text-align: center;
-}
-
-.atubangan {
-  background: #FFCDB2;
-}
-
-.likod{
-  transform: rotateY(180deg);
-}
-
 
 .libox {
   text-align: center;
@@ -157,32 +118,69 @@ h1, h2 {
   }
 }
 
-
-.card {
+.tuyok {
+  display: inline-block;
+  perspective: 1000px;
+  cursor: pointer;
   width: 325px;
   height: 280px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin: 16px auto;
-  transition: linear 0.3s;
+  position: relative;
 }
 
-.card:hover {
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.tuyok:hover .card {
+  transform: rotateY(180deg);
+}
+
+.atubangan, .likod {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.atubangan {
+  background: #fff;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.likod {
+  background: #fff;
+  transform: rotateY(180deg);
   box-shadow: 0 8px 16px 0 #FFECCC;
-  transform: rotate(-2deg);
+   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .card-image {
   width: 100%;
   height: 80%;
-  object-fit: cover;  
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin: 0;
 }
 
-.card h2 {
-  margin: 12px 0 4px;
+.card h2{
   font-size: 1.2rem;
-  color: #333;  
+  color: #333;
 }

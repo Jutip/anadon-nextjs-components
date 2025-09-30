@@ -8,23 +8,21 @@ export default function Home() {
   return (
     <div className="box">
       <div className="content">
-          <Header title="My Profile"/>
-          <div className="tuyok">
-            <div className="tuyoknasad">
-              <div className="atubangan">
-                <Header subtitle="Joseph Anadon"/>
-              </div>
-              <div className="likod">
-                <Header subtitle="Aged 19"/>
-              </div>
+          <Header title="My Profile" subtitle="Joseph Anadon"/>
+
+        <div className="tuyok">
+          <div className="card">
+            <div className="atubangan">
+              <ProfileCard img="sunsit.jfif" h2="Sunset 17:45"/>
+            </div>
+            <div className="likod">
+              <ProfileCard h3="Joseph Anadon 19 | Sunset @Home 2025"/>
             </div>
           </div>
-        <div className="card">
-          <ProfileCard />
-        </div>
+        </div>  
           <SkillList/>
           <Footer />
-      </div>
-    </div>  
+      </div> 
+    </div>
   );
 }

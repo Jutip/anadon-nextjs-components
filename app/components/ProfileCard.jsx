@@ -1,8 +1,9 @@
-export default function ProfileCard({}) {
+export default function ProfileCard({img, h2, h3}) {
     return (
-        <>
-        <img src="sunsit.jfif" alt="Joseph, 19, Sunset 17:45"/>
-        <h2>Sunset          17:45</h2>
-        </>
+        <div className="pc">
+        {img && <img src={img} alt="profile" className="cardimg"/>}
+        {h2 && <h2>{h2}</h2>}
+        {h3 && <h3>{h3}</h3>}
+        </div>
     );
 }
